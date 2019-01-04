@@ -1,15 +1,7 @@
 {% extends "myapp/base.html" %}
 
 {% block content %}
-
-  <p>Projects</p>
-
-  <ul>
-    {% for project in projects %}
-      <li>{{ project }}</li>
-    {% empty %}
-      <li>No projects have been added yet.</li>
-    {% endfor %}
-  </ul>
+  
+  <p>Project tracker</p>
 
 {% endblock content %}

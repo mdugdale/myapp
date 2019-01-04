@@ -1,0 +1,16 @@
+{% extends "myapp/base.html" %}
+
+{% block content %}
+
+  <p>Projects</p>
+  <ul>
+    {% for project in projects %}
+      <li>
+      	<a href="{% url 'myapp:project' project.id %}">{{ project }}</a>
+      </li>
+    {% empty %}
+      <li>No projects have been added yet.</li>
+    {% endfor %}
+  </ul>
+
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends "myapp/base.html" %}
+
+{% block content %}
+
+  <p>Project: {{ project }}</p>
+
+  <p>Tasks:</p>
+  <ul>
+  {% for task in tasks %}
+  	<li>
+  		<p>{{ task.date_added|date:'M d, Y H:i' }}</p>
+  		<p>{{ task.text|linebreaks }}</p>
+  	</li>
+  {% empty %}
+  	<li>
+  		There are no tasks for this project yet
+  	</li>
+  {% endfor %}
+  </ul>
+
+{% endblock content %}
